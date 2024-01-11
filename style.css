@@ -2,29 +2,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @font-face {
     font-family: 'Idroid';
-    src: url('IDroid.otf') format('opentype');
+    src: url(fontes/IDroid.otf) format('opentype');
 }
+/* CSS Document */
+
 
 /* General Style */
-* {
-    margin: 0;
-    padding: 0;
+* {    margin: 0px;
+    padding: 0px;
 }
+
 
 body {
     background-color: #84e1ad;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 
-/* Header Style */
+
+/* Header style */
 header {
     background: linear-gradient(to bottom, #3cd983, #1a5c38);
-    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.642);
-    padding: 20px 0 5px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.642);
+    padding: 20px 0 5px;  
+   
 }
-
 header > h1 {
-    color: white;
+    color: #ffffff;
     font-family: 'Bebas Neue', cursive;
     font-weight: lighter;
     margin: 10px 0;
@@ -32,69 +36,102 @@ header > h1 {
     text-transform: uppercase;
 }
 
-header > p {
-    color: white;
+
+header > p {    
+    color: #ffffff;
     font-size: 0.8em;
-    margin: 20px 0;
     text-align: center;
+    margin: 20px 0;
 }
+
 
 nav {
     margin-left: 20px;
 }
 
+
 nav > a {
-    color: white;
+    color: #ffffff;
     cursor: pointer;
     font-size: 0.8em;
-    margin: 0 8px;
     text-decoration: none;
+    margin: 0 8px;
 }
 
-nav a:hover {
+
+nav > a:hover {
     color: #84e1ad;
     text-decoration: underline;
-    
 }
 
-/* Main  Style */
+
+/* Main style */
 main {
-    background-color: white;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.642);
-    margin: auto;
-    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.642);
+    margin: 0 auto  10px;
     width: 70%;
+    padding-bottom: 10px;
+}  
+
+
+main > p {
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 0.8em;
+    margin: 10px 0;
+    padding: 10px 30px 0;
 }
+
 
 main > section > h1 {
     color: #195a36;
-    font-family: 'Idroid', sans-serif;
+    font-family:"Idroid", Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
 }
 
-main > section > p {
-    color: #000000;
-    font-size: 0.8em;
-    margin: 10px 0;
-    text-align: justify;
-    text-indent: 20px;
-}
 
-strong {
+    main > section > h2 {
+    background: linear-gradient(to right, #c8ecd7, #ffffff);
     color: #195a36;
-}
-
-main > section > h2 {
-    background: linear-gradient(to right, #c8ecd7, #ffffff); 
-    color: #195a36;
-    font-family: 'Idroid', sans-serif;
+    font-family:"Idroid", Arial, Helvetica, sans-serif;
     margin: 15px 0;
     padding-left: 10px;
 }
 
-.link-icon > a {
+
+ main > section > p {
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 0.8em;
+    margin: 10px 0;
+ }
+
+
+ strong {
     color: #195a36;
     text-decoration: none;
+ }
+
+
+.link-icon::after {
+    background-image: url('imagens/link-icon.png');
+    background-size: cover;  /* Ajusta a imagem para cobrir todo o espaço do pseudo-elemento */
+    content: "";
+    display: inline-block;
+    height: 10px;  /* Altura da imagem */
+    width: 10px;  /* Largura da imagem */
+    background-position: center;  /* Centraliza a imagem */
+    margin-left: 5px;  /* Espaçamento entre a imagem e o texto */
 }
+
+
+.link-icon > a {
+    color: #195a36;    
+    text-decoration: none;
+}
+
 
 .link-icon > a:hover {
     color: #84e1ad;
@@ -102,40 +139,107 @@ main > section > h2 {
 }
 
 
-.link-icon::after {
-    background-image: url('__MACOSX/imagens/link-icon.png');
-    background-size: cover;
-    content: "";
-    display: inline-block;
-    height: 10px;
-    margin-left: 5px;
-    width: 10px;
-}
-
 .droids-img {
     display: block;
     margin: auto;
     width: 80%;
 }
 
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 90%;        
+    }
+   
+}
 iframe {
     display: block;
     margin: auto;
     width: 90%;
+    height: 400px;
 }
 
-@media screen and (max-width: 1000px) {
-    iframe {
-        height: 100px;
-    }
+
+#first-section {
+    padding: 15px;
 }
-@media screen and (max-width: 5000px) {
-    iframe {
-        height: 500px;
-    }
+
+
+#section-video {
+    background-color: #1a5c38;
+    margin: 10px auto;
+    width: 100%;
+    padding: 20px 0;
 }
-@media screen and (max-width: 800px) {
-    iframe {
-        height: 200px;
-    }
+
+
+#extra-section {
+    background-color: #c5ebd6;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.642);
+    margin: 10px auto;
+    width: 90%;
+}
+
+
+#extra-section > section {
+    padding: 10px;
+}
+
+
+#extra-section > section > p {
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 0.8em;
+    margin: 10px 0;
+   
+}
+
+
+h3 {
+    background-color: #2fa866;
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 0.8em;
+    padding: 7px;
+}
+
+
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li {
+    list-style-type: none;
+    font-size: 0.8em;
+}
+
+li::before {
+    content: "✔";
+    color: #195a36;
+    font-weight: bolder;
+    display: inline-block;
+    width: 1em;
+}
+
+/* Footer Style */
+footer {
+    background-color: #195a36;
+    width: 100%;
+}
+
+
+footer > p {
+    color: #ffffff;
+    font-size: 0.8em;
+    margin: 10px auto 0;
+    padding: 10px;
+    text-align: center;
+}
+
+footer > p > strong {
+    color: #ffffff;
 }
