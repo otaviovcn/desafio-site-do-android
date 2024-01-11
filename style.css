@@ -1,5 +1,9 @@
 @charset "UTF8";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: 'Idroid';
+    src: url('IDroid.otf') format('opentype');
+}
 
 /* General Style */
 * {
@@ -47,4 +51,91 @@ nav > a {
     text-decoration: none;
 }
 
+nav a:hover {
+    color: #84e1ad;
+    text-decoration: underline;
+    
+}
 
+/* Main  Style */
+main {
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.642);
+    margin: auto;
+    padding: 15px;
+    width: 70%;
+}
+
+main > section > h1 {
+    color: #195a36;
+    font-family: 'Idroid', sans-serif;
+}
+
+main > section > p {
+    color: #000000;
+    font-size: 0.8em;
+    margin: 10px 0;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+strong {
+    color: #195a36;
+}
+
+main > section > h2 {
+    background: linear-gradient(to right, #c8ecd7, #ffffff); 
+    color: #195a36;
+    font-family: 'Idroid', sans-serif;
+    margin: 15px 0;
+    padding-left: 10px;
+}
+
+.link-icon > a {
+    color: #195a36;
+    text-decoration: none;
+}
+
+.link-icon > a:hover {
+    color: #84e1ad;
+    text-decoration: underline;
+}
+
+
+.link-icon::after {
+    background-image: url('__MACOSX/imagens/link-icon.png');
+    background-size: cover;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin-left: 5px;
+    width: 10px;
+}
+
+.droids-img {
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+
+@media screen and (max-width: 1000px) {
+    iframe {
+        height: 100px;
+    }
+}
+@media screen and (max-width: 5000px) {
+    iframe {
+        height: 500px;
+    }
+}
+@media screen and (max-width: 800px) {
+    iframe {
+        height: 200px;
+    }
+}
